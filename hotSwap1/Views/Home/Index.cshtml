@@ -1,0 +1,20 @@
+﻿@using System.Configuration;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index - updated view</h2>
+
+<p>
+    @{
+        foreach (ConnectionStringSettings connection in System.Configuration.ConfigurationManager.ConnectionStrings)
+        {
+            
+            <div><b>@connection.Name</b> - @connection.ConnectionString </div>                                                                                                                     
+        }
+    }
+
+</p>
+
